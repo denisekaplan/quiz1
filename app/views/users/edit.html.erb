@@ -1,0 +1,13 @@
+<h1>Edit this user</h1>
+
+<%= form_for @user do |f| %>
+	<%= f.text_field :username %>
+	<%= f.text_field :email %>
+	<%= f.date_field :dob %>
+
+	<%=f.submit "Edit this user" %>
+
+<%end%>
+
+<%= link_to 'Back to Users list', users_path%>
+<%= link_to 'Delete this User', :user, method: :delete, data: {confirm: 'Are you sure you want to delete this user?'} %>
